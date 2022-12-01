@@ -13,7 +13,7 @@ pipeline{
         stage("Maven Build"){
             steps{
                 sh '''
-                   "mvn clean package"
+                   "mvn clean verify"
                    "mv target/*.war target/myweb.war"
                 '''
             }
