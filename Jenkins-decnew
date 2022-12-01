@@ -12,10 +12,8 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                sh '''
-                   "mvn clean verify"
-                   "mv target/*.war target/myweb.war"
-                '''
+                sh "mvn clean verify"
+                sh "mv target/*.war target/myweb.war"
             }
         }
         stage("deploy-dev"){
